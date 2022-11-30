@@ -4,16 +4,12 @@ const config = require('./config')
 
 
 if (config.username === "" || config.password === "" || config.gamestoidle === [] || config.status === "" ) {
-	console.log("")
-	console.log('\x1b[31m[ERROR] \x1b[33mEdit your config.js file before u start the bot!\x1b[37m')
-	console.log("")
+	console.log('\n\x1b[31m[ERROR] \x1b[33mEdit your config.js file before u start the bot!\x1b[37m\n')
 	process.exit(1)
 }
 
 if (config.gamestoidle.length > 32) {
-	console.log("")
-	console.log('\x1b[31m[ERROR] \x1b[33mYou are only able to idle 32 games at once due to steam limitation... Delete some ID numbers in config to start idling.\x1b[37m')
-	console.log("")
+	console.log('\n\x1b[31m[ERROR] \x1b[33mYou are only able to idle 32 games at once due to steam limitation... Delete some ID numbers in config to start idling.\x1b[37m\n')
 	process.exit(1)
 }
 
